@@ -1,0 +1,116 @@
+[
+  {
+    "title": "Configure Azure Active Directory Single Sign-On (SSO)",
+    "infos": {
+      "folder": [
+        {"text": "Azure", "link": "/azure"},
+        {"text": "Hybrid", "link": "/hybrid"},
+        {"text": "Microsoft 365", "link": "/microsoft-365"}
+      ]
+    },
+    "description": {
+      "text": "You installed Azure AD Connect and want to configure Azure Active Directory Single Sign-On (SSO). It’s a great feature so that users can get a seamless single sign-on experience when accessing cloud services from their domain-joined desktop machines. In this article, you will learn how to set up Azure Active Directory Single Sign-On.",
+      "textLink": "",
+      "link": "#"
+    },
+    "tableOfContents": [
+      {
+        "title": "Azure Active Directory Single Sign-On prerequisites",
+        "link": "#azure-active-directory-single-sign-on-prerequisites",
+        "description": "Before you start to enable the feature Azure Active Directory Single Sign-On, you have to check that the organization meets the AAD SSO prerequisities.",
+        "list": [
+          {
+            "text": "Install Azure AD Connect",
+            "link": "#install-azure-ad-connect",
+            "description": "You need to install and configure Azure AD Connect before you proceed further. If you already have Azure AD Connect in the organization, we recommend you upgrade to the latest Azure AD Connect version. See the next step."
+          },
+          {
+            "text": "Upgrade Azure AD Connect to latest version",
+            "link": "#upgrade-azure-ad-connect-to-latest-version",
+            "description": {
+              "text": "The below articles will help you to upgrade Azure AD Connect to the latest version:",
+              "list": [
+                {
+                  "text": "Upgrade Azure AD Connect",
+                  "link": "/upgrade-azure-ad-connect"
+                },
+                {
+                  "text": "Upgrade Azure AD Connect to V2.x",
+                  "link": "/upgrade-azure-ad-connect-to-v2"
+                },
+                {
+                  "text": "Migrate Azure AD Connect to new server",
+                  "link": "/migrate-azure-ad-connect-to-new-sever"
+                }
+              ]
+            }
+          },
+          {
+            "text": "Configure firewall",
+            "link": "#configure-firewall",
+            "description": {
+              "text": "Add the below URL in the firewall allow list between Azure AD Connect server and Azure AD:",
+              "list": "*.msappproxy.net over port 443",
+              "image": "/"
+            }
+          },
+          {
+            "text": "Enable modern authentication",
+            "link": "#enable-modern-authentication",
+            "description": {
+              "text": "Go through the article ",
+              "link": { 
+                "text": "enable modern authentication in Microsoft 365:", 
+                "textLink": "/enable-modern-authentication-in-microsoft-365"
+              },
+              "list": [
+                "Enable Modern Authentication in the Microsoft 365 tenant",
+                "Configure the registry key on the clients to support modern authentication"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "title": "How to configure Azure Active Directory Single Sign-On",
+        "link": "#how-to-configure-azure-active-directory-single-sign-on",
+        "list": [
+          {
+            "text": "Step 1. Enable Single Sign-On in Azure Active Directory Connect",
+            "link": "#step-1-enable-single-sign-on-in-azure-active-directory-connect"
+          },
+          {
+            "text": "Step 2. Verify Single Sign-On is active",
+            "link": "#step-2-verify-single-sign-on-is-active"
+          },
+          {
+            "text": "Step 3. Configure Group Policy",
+            "link": "step-3-configure-group-policy",
+            "listPolicy": [
+              {
+                "text": "Policy 1: Site to Zone Assignment List",
+                "link": "#policy-1-site-to-zone-assignment-list"
+              },
+              {
+                "text": "Policy 2: Allow updates to status bar via script",
+                "link": "#policy-2-allow-updates-to-status-bar-via-script"
+              }
+            ]
+          },
+          {
+            "text": "Step 4. SSO browsers compatibility",
+            "link": "#step-4-sso-browsers-compatibility"
+          }
+        ]
+      },
+      {
+        "title": "Test Azure Active Directory SSO",
+        "link": "#test-azure-active-directory-sso"
+      },
+      {
+        "title": "Conclusion",
+        "link": "#conclusion"
+      }
+    ]
+  }
+]
